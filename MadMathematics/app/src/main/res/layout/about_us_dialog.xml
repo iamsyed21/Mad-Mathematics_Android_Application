@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_gravity="center"
+    android:layout_height="wrap_content"
+    android:layout_width="350dp">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        app:cardCornerRadius="20dp"
+        android:background="#00FFFFFF"
+        android:backgroundTint="#00FFFFFF"
+        app:cardBackgroundColor="#00FFFFFF"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="350dp"
+            android:gravity="center"
+            android:scrollbars="vertical"
+            android:background="@drawable/dialog_bg"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ListView
+                android:id="@+id/aboutListView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/SecondaryComponentRed"
+                android:padding="10dp"
+                android:scrollbars="vertical"
+                tools:ignore="TouchTargetSizeCheck" />
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+

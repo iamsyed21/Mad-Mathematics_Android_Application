@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomePage">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbarThumbVertical="@drawable/scroll_thumb"
+        android:scrollbarSize="5dp"
+        android:scrollbars="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="20dp"
+            android:orientation="vertical"
+            android:scrollbars="vertical">
+
+
+            <ImageView
+                android:id="@+id/logoPlacer"
+                android:layout_width="wrap_content"
+                android:layout_height="400dp"
+                android:foregroundGravity="center"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/logo_no_background" />
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_bg_design"
+                android:id="@+id/startTheGame"
+                android:text="Start Game"
+                android:fontFamily="@font/rancho_font"
+                android:textSize="35sp"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:paddingRight="30dp"
+                android:paddingLeft="30dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:textStyle="bold"
+                android:textColor="@color/ComponentRed"/>
+
+            <Button
+                android:id="@+id/settingsButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/options_bg"
+                android:drawableStart="@drawable/ic_baseline_settings_24"
+                android:fontFamily="@font/source_sans_pro_bold"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:text="Settings"
+                android:drawablePadding="5dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:textColor="@color/SecondaryComponentRed"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/blue_card_view"
+                android:padding="15dp">
+                <TextView
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/checkYourHighScoreTT"
+                    android:layout_height="wrap_content"
+                    android:text="Check Your \nHigh Scores!"
+                    android:fontFamily="@font/source_sans_pro_bold"
+                    android:textColor="@color/SecondaryComponentRed"
+                    android:textSize="35sp"/>
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:elevation="20dp"
+                    android:src="@drawable/trophy_image"
+                    android:scaleType="fitCenter"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@id/checkYourHighScoreTT"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_bg_design"
+                    android:id="@+id/EasyModeHighScoreButton"
+                    android:text="Easy Scores"
+                    android:fontFamily="@font/source_sans_pro_semibold"
+                    android:textSize="15sp"
+                    android:layout_below="@+id/checkYourHighScoreTT"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="25dp"
+                    android:paddingRight="40dp"
+                    android:paddingLeft="40dp"
+                    android:paddingTop="15dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:paddingBottom="18dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/ComponentRed"/>
+
+
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_bg_design"
+                    android:text="Intermediate Scores"
+                    android:id="@+id/InterModeHighScoreButton"
+                    android:fontFamily="@font/source_sans_pro_semibold"
+                    android:textSize="15sp"
+                    android:layout_below="@+id/EasyModeHighScoreButton"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="45dp"
+                    android:paddingRight="40dp"
+                    android:paddingLeft="40dp"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="18dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/ComponentRed"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_bg_design"
+                    android:id="@+id/HardModeHighScoreButton"
+                    android:text="Hard Scores"
+                    android:fontFamily="@font/source_sans_pro_semibold"
+                    android:textSize="15sp"
+                    android:layout_below="@+id/InterModeHighScoreButton"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="45dp"
+                    android:paddingRight="40dp"
+                    android:paddingLeft="40dp"
+                    android:paddingTop="15dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:paddingBottom="18dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/ComponentRed"/>
+
+
+                <TextView
+                    android:id="@+id/howScoresAreCalculatedTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/HardModeHighScoreButton"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="25dp"
+                    android:clickable="true"
+                    android:drawableStart="@drawable/ic_baseline_info_24"
+                    android:drawablePadding="5dp"
+                    android:fontFamily="@font/source_sans_pro_regular"
+                    android:padding="10dp"
+                    android:text="See How Scores Are Calculated"
+                    android:layout_marginBottom="20dp"
+                    android:textColor="@color/Highlighter"
+                    android:minHeight="48dp"
+                    android:textSize="20sp" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+    </ScrollView>
+
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

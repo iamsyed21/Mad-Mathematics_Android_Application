@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/BackgroundBlue"
+    tools:context=".EasyModeHighScores">
+
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+        android:textColor="@color/SecondaryComponentRed"
+    android:layout_marginTop="10dp"
+    android:text="EASY MODE"
+        android:textSize="35dp"
+        android:fontFamily="@font/source_sans_pro_semibold"
+    android:id="@+id/pageDifficultyTextView"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/pageDifficultyTextView"
+        android:layout_centerHorizontal="true"
+        android:fadeScrollbars="false"
+        android:scrollbarThumbVertical="@drawable/scroll_thumb"
+        android:scrollbarSize="3dp"
+        android:layout_marginTop="10dp"
+        android:layout_above="@id/bannerAdView"
+        android:scrollbarStyle="insideOverlay"
+        android:scrollbars="vertical"
+        tools:ignore="SpeakableTextPresentCheck">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/scoresRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:padding="10dp"
+                android:scrollbars="vertical" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/scoresRecyclerView"
+                android:background="@drawable/highscore_card_view_bg"
+                android:padding="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/progressTrackerTextView"
+                    android:layout_centerHorizontal="true"
+                    android:text="Progress Graph"
+                    android:fontFamily="@font/source_sans_pro_bold"
+                    android:textSize="30sp"
+                    android:textColor="@color/ComponentRed"/>
+
+                <com.github.mikephil.charting.charts.LineChart
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp"
+                    android:layout_below="@id/progressTrackerTextView"
+                    android:layout_height="350dp"
+                    android:id="@+id/trackerGraph">
+                </com.github.mikephil.charting.charts.LineChart>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:id="@+id/pleasZoomTextView"
+                    android:layout_below="@id/trackerGraph"
+                    android:textSize="15sp"
+                    android:textColor="@color/Highlighter"
+                    android:layout_marginTop="5dp"
+                    android:padding="1dp"
+                    android:text="Please Zoom and Scroll To navigate the graph"/>
+
+                <TextView
+                    android:id="@+id/playAtLeastThree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/progressTrackerTextView"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="150dp"
+                    android:fontFamily="@font/source_sans_pro_regular"
+                    android:text="Please Play at least 3 games to track progress"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:visibility="visible" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/pleasZoomTextView"
+                    android:id="@+id/questionStatisticsRelativeLayout"
+                    android:layout_marginBottom="20dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Score Analysis"
+                        android:textSize="35sp"
+                        android:id="@+id/scoreAnalysisTextView"
+                        android:fontFamily="@font/source_sans_pro_semibold"
+                        android:textColor="@color/BackgroundBlue"
+                        android:layout_centerHorizontal="true"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_below="@+id/scoreAnalysisTextView"
+                        android:fontFamily="@font/rancho_font"
+                        android:textColor="@color/BackgroundBlue"
+                        android:layout_alignParentStart="true"
+                        android:text="Total Attempts"
+                        android:id="@+id/totalattempts"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_below="@+id/totalattempts"
+                        android:fontFamily="@font/rancho_font"
+                        android:id="@+id/highestScore"
+                        android:textColor="@color/BackgroundBlue"
+                        android:layout_alignParentStart="true"
+                        android:text="Highest Score"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_below="@+id/highestScore"
+                        android:fontFamily="@font/rancho_font"
+                        android:id="@+id/averagSCORE"
+                        android:textColor="@color/BackgroundBlue"
+                        android:layout_alignParentStart="true"
+                        android:text="Average Score"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_below="@+id/averagSCORE"
+                        android:fontFamily="@font/rancho_font"
+                        android:id="@+id/LEASTtIMEtAKEN"
+                        android:textColor="@color/BackgroundBlue"
+                        android:layout_alignParentStart="true"
+                        android:text="Least Time Taken"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@+id/LEASTtIMEtAKEN"
+                        android:layout_marginStart="20dp"
+                        android:fontFamily="@font/rancho_font"
+                        android:textColor="@color/BackgroundBlue"
+                        android:layout_alignParentStart="true"
+                        android:id="@+id/AVERAGEtIME"
+                        android:text="Average Time Taken\nPer Round"
+                        android:textSize="30sp" />
+
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:fontFamily="@font/rancho_font"
+                        android:layout_alignParentEnd="true"
+                        android:textStyle="bold"
+                        android:layout_marginTop="15dp"
+                        android:layout_below="@+id/scoreAnalysisTextView"
+                        android:text="Time Taken"
+                        android:textColor="@color/ComponentRed"
+                        android:textSize="30sp"
+                        android:id="@+id/totalAttemptsTextView"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:textColor="@color/ComponentRed"
+                        android:textStyle="bold"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="@font/rancho_font"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@+id/totalAttemptsTextView"
+                        android:text="HighestScore"
+                        android:textSize="30sp"
+                        android:id="@+id/highestScoreTextView"/>
+
+
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/rancho_font"
+                        android:textColor="@color/ComponentRed"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_alignParentEnd="true"
+                        android:textStyle="bold"
+                        android:layout_below="@+id/highestScoreTextView"
+                        android:text="Average Score"
+                        android:textSize="30sp"
+                        android:id="@+id/averageScoreTextView"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/rancho_font"
+                        android:textColor="@color/ComponentRed"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_alignParentEnd="true"
+                        android:textStyle="bold"
+                        android:layout_below="@+id/averageScoreTextView"
+                        android:text="Average Score"
+                        android:textSize="30sp"
+                        android:id="@+id/leastTimeTakenTextView"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/rancho_font"
+                        android:textColor="@color/ComponentRed"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_alignParentEnd="true"
+                        android:textStyle="bold"
+                        android:layout_below="@+id/leastTimeTakenTextView"
+                        android:text="Average Score"
+                        android:textSize="30sp"
+                        android:id="@+id/averagetimetakenTextView"/>
+
+
+
+
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+
+
+
+        </RelativeLayout>
+
+
+
+
+    </ScrollView>
+
+
+    <com.google.android.gms.ads.AdView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/bannerAdView"
+        app:adSize="BANNER"
+        app:adUnitId="@string/bannerAd_1"
+        android:background="@color/BackgroundBlue" />
+
+
+
+</RelativeLayout>
+

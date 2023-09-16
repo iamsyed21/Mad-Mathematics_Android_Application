@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterNewUser">
+
+
+    <ImageButton
+        android:id="@+id/goBacktologin"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:background="#00FFFFFF"
+        android:padding="5dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/go_back_button"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/card_view_bg"
+        android:layout_marginTop="80dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register Your Profile!"
+            android:textSize="25sp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/registerNewUser"
+            android:textColor="@color/SecondaryComponentRed"
+            android:fontFamily="@font/source_sans_pro_bold"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="40dp"
+            android:paddingEnd="40dp"
+            android:paddingBottom="40dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/loginFieldsLinearLayout"
+            android:layout_below="@+id/registerNewUser">
+
+            <EditText
+                android:id="@+id/NewUserNameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/edit_text_background"
+                android:drawableStart="@drawable/ic_baseline_person_24"
+                android:drawablePadding="15dp"
+                android:elevation="2dp"
+                android:ems="20"
+                android:fontFamily="@font/rancho_font"
+                android:hint="Username"
+                android:inputType="text"
+                android:padding="10dp"
+                android:textColor="@color/ComponentRed"
+                android:textColorHint="@color/SecondaryComponentRed"
+                android:textSize="20sp"
+                tools:ignore="TouchTargetSizeCheck" />
+
+
+            <EditText
+                android:id="@+id/NewUserEmailIdEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edit_text_background"
+                android:drawableStart="@drawable/ic_baseline_email_24"
+                android:drawablePadding="15dp"
+                android:elevation="2dp"
+                android:ems="20"
+                android:fontFamily="@font/rancho_font"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:padding="10dp"
+                android:textColor="@color/ComponentRed"
+                android:textColorHint="@color/SecondaryComponentRed"
+                android:textSize="20sp"
+                tools:ignore="TouchTargetSizeCheck" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                app:passwordToggleEnabled="true"
+                android:paddingEnd="10dp"
+                android:paddingStart="0dp"
+                app:hintEnabled="false"
+                android:layout_gravity="center"
+                app:startIconDrawable="@drawable/ic_baseline_lock_24"
+                app:startIconTint="@color/SecondaryComponentRed"
+                android:textColorHint="@color/SecondaryComponentRed"
+                android:background="@drawable/edit_text_background"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/NewUserPasswordEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="#00000000"
+                    android:fontFamily="@font/rancho_font"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:padding="10dp"
+                    android:textColor="@color/ComponentRed"
+                    android:textColorHint="@color/SecondaryComponentRed"
+                    android:textSize="20sp"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/NewUserRegisterButton"
+                android:text="Sign Up!"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/button_bg_design"
+                android:fontFamily="@font/source_sans_pro_bold"
+                android:paddingLeft="30dp"
+                android:paddingTop="5dp"
+                android:paddingRight="30dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:textColor="@color/ComponentRed"
+                android:textSize="15sp"
+                android:paddingBottom="10dp"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Highlighter"
+                    android:textSize="11sp"
+                    android:text="Read the Terms and Conditions "/>
+
+                <TextView
+                    android:id="@+id/termsAndConditionsTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:fontFamily="@font/source_sans_pro_bold"
+                    android:padding="2dp"
+                    android:text="Here!"
+                    android:textColor="@color/SecondaryComponentRed"
+                    android:textSize="20sp"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+
+    <ProgressBar
+        android:id="@+id/registerUserPageProgressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/back_for_progress_bar"
+        android:indeterminateTint="#E29F94"
+        android:progressTintMode="src_atop"
+        android:visibility="gone" />
+
+</RelativeLayout>

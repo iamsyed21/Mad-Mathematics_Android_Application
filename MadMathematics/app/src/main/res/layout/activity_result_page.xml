@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    android:layout_column="2"
+    tools:context=".ResultPage">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bannerAdView"
+        android:fadeScrollbars="false"
+        android:scrollbarThumbVertical="@drawable/scroll_thumb"
+        android:scrollbars="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:id="@+id/topRelativeLayout"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/scores_view_bg">
+
+            <Button
+                android:id="@+id/reviewQuestionsButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_bg_design"
+                android:drawableStart="@drawable/ic_baseline_arrow_back_24"
+                android:fontFamily="@font/source_sans_pro_semibold"
+                android:paddingStart="10dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="25dp"
+                android:paddingBottom="15dp"
+                android:text=" Review Questions"
+                android:textColor="@color/ComponentRed"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/scoreTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/reviewQuestionsButton"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/source_sans_pro_bold"
+                android:padding="10dp"
+                android:text="Score!"
+                android:textColor="@color/BackgroundBlue"
+                android:textSize="50sp"
+                android:textStyle="bold" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/scoreTextView"
+                android:id="@+id/questionStatisticsRelativeLayout"
+                android:layout_centerHorizontal="true"
+                android:padding="10dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/rancho_font"
+                    android:textColor="@color/BackgroundBlue"
+                    android:layout_alignParentStart="true"
+                    android:text="Time Taken:"
+                    android:id="@+id/ttTextView"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_below="@+id/ttTextView"
+                    android:fontFamily="@font/rancho_font"
+                    android:id="@+id/qs_Attempted"
+                    android:textColor="@color/BackgroundBlue"
+                    android:layout_alignParentStart="true"
+                    android:text="Question Attempted:"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/qs_Attempted"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/rancho_font"
+                    android:textColor="@color/BackgroundBlue"
+                    android:layout_alignParentStart="true"
+                    android:id="@+id/qs_Skipped"
+                    android:text="Questions Skipped:"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_below="@+id/qs_Skipped"
+                    android:fontFamily="@font/rancho_font"
+                    android:id="@+id/ansCorrectly"
+                    android:textColor="@color/BackgroundBlue"
+                    android:layout_alignParentStart="true"
+                    android:text="Answered Correctly:"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_below="@+id/ansCorrectly"
+                    android:fontFamily="@font/rancho_font"
+                    android:textColor="@color/BackgroundBlue"
+                    android:layout_alignParentStart="true"
+                    android:text="Answered Incorrectly"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/rancho_font"
+                    android:layout_alignParentEnd="true"
+                    android:textStyle="bold"
+                    android:text="Time Taken"
+                    android:textColor="@color/ComponentRed"
+                    android:textSize="30sp"
+                    android:id="@+id/timeTakenTextView"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:textColor="@color/ComponentRed"
+                    android:textStyle="bold"
+                    android:layout_alignParentEnd="true"
+                    android:fontFamily="@font/rancho_font"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/timeTakenTextView"
+                    android:text="Qs Attempted"
+                    android:textSize="30sp"
+                    android:id="@+id/questionsAttemptedTextView"/>
+
+
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/rancho_font"
+                    android:textColor="@color/ComponentRed"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:textStyle="bold"
+                    android:layout_below="@+id/questionsAttemptedTextView"
+                    android:text="Qs Skipped"
+                    android:textSize="30sp"
+                    android:id="@+id/questionsSkippedTextView"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/rancho_font"
+                    android:textColor="@color/ComponentRed"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:textStyle="bold"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/questionsSkippedTextView"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="Ans Correctly"
+                    android:textSize="30sp"
+                    android:id="@+id/answeredCorrectlyTextView"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/rancho_font"
+                    android:layout_alignParentEnd="true"
+                    android:textColor="@color/ComponentRed"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_below="@+id/answeredCorrectlyTextView"
+                    android:layout_gravity="center"
+                    android:text="Ans Incorrectly"
+                    android:textSize="30sp"
+                    android:id="@+id/answeredInCorrectlyTextView"/>
+
+            </RelativeLayout>
+
+
+            <Button
+                android:id="@+id/startTheGameAgain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/questionStatisticsRelativeLayout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_bg_design"
+                android:fontFamily="@font/source_sans_pro_bold"
+                android:paddingStart="40dp"
+                android:layout_marginBottom="10dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="45dp"
+                android:paddingBottom="15dp"
+                android:text="Play Again!"
+                android:textColor="@color/ComponentRed"
+                android:textSize="25sp" />
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:background="@color/BackgroundBlue"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/topRelativeLayout"
+            android:scrollbarStyle="outsideOverlay"
+            android:layout_margin="5dp"
+            android:scrollbars="vertical"
+            tools:itemCount="15"
+            android:padding="10dp"
+            android:id="@+id/updatedHighScoreRecyclerView"/>
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+
+
+
+
+
+
+
+    <com.google.android.gms.ads.AdView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/bannerAdView"
+        app:adSize="BANNER"
+        app:adUnitId="@string/bannerAd_4"
+        android:background="@color/SecondaryComponentRed" />
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/BackgroundBlue"
+    tools:context=".ReviewingQuestionsActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:layout_above="@id/bannerAdView"
+        android:fadeScrollbars="false"
+        android:id="@+id/primaryScrollBar">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/firstRelativeLayout"
+        android:layout_height="wrap_content">
+
+
+
+    <Button
+        android:id="@+id/goBackButton"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button_bg_design"
+        android:drawableStart="@drawable/ic_baseline_arrow_back_24"
+        android:drawablePadding="20dp"
+        android:paddingStart="15dp"
+        android:paddingTop="05dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="10dp"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Review Questions"
+        android:layout_below="@+id/goBackButton"
+        android:fontFamily="@font/source_sans_pro_semibold"
+        android:textSize="35sp"
+        android:textColor="@color/SecondaryComponentRed"
+        android:id="@+id/topTextView"
+        android:layout_centerHorizontal="true"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_below="@+id/topTextView"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="8dp"
+        android:id="@+id/questionAndAnswerCardRelativeLayer"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/question_card_view"
+        android:padding="15dp">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:text="The Question"
+            android:textAlignment="center"
+            android:layout_marginTop="10dp"
+            android:id="@+id/theCurrentQuestionTextView"
+            android:textColor="@color/BackgroundBlue"
+            android:fontFamily="@font/rancho_font"
+            android:padding="5dp"
+            android:textSize="35sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/theCurrentQuestionTextView"
+            android:text="ANSWER"
+            android:fontFamily="@font/source_sans_pro_regular"
+            android:background="@drawable/options_bg"
+            android:textSize="25sp"
+            android:layout_centerHorizontal="true"
+            android:paddingRight="80dp"
+            android:paddingLeft="80dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/theCurrentAnswerTextView"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/theNextQuestionButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/theCurrentAnswerTextView"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/go_front_button"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/thePreviousQuestionButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/theCurrentAnswerTextView"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/go_back_button"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+
+
+
+
+    </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:fillViewport="true"
+            android:layout_below="@+id/questionAndAnswerCardRelativeLayer"
+            android:id="@+id/hint_notes_scrollView"
+            android:layout_marginBottom="10dp"
+            android:scrollbars="vertical"
+            android:background="@drawable/hint_bg">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textSize="25sp"
+                android:textAlignment="center"
+                android:text="how addition happens is great."
+                android:fontFamily="@font/rancho_font"
+                android:id="@+id/hint_notes_TextView"
+                android:textColor="@color/SecondaryComponentRed" />
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+
+
+    </ScrollView>
+
+
+
+
+
+
+    <com.google.android.gms.ads.AdView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/bannerAdView"
+        app:adSize="BANNER"
+        app:adUnitId="@string/bannerAd_5"
+        android:background="@color/BackgroundBlue" />
+
+
+
+
+
+
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+

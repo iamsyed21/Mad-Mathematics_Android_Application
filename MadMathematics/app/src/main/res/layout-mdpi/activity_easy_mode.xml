@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/BackgroundBlue"
+    tools:context=".EasyMode">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EASY MODE"
+        android:fontFamily="@font/source_sans_pro_semibold"
+        android:textSize="15sp"
+        android:textColor="@color/SecondaryComponentRed"
+        android:id="@+id/topTextView"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"/>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/topTextView">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="320dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:id="@+id/questionAndAnswerCardRelativeLayer"
+                android:background="@drawable/question_card_view"
+                android:padding="5dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1/15"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/source_sans_pro_semibold"
+                    android:layout_marginTop="2dp"
+                    android:textColor="@color/BackgroundBlue"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/attemptedQuestionsTextView"/>
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/timerRelativeLayout"
+                    android:layout_below="@id/attemptedQuestionsTextView"
+                    android:layout_height="wrap_content">
+
+                    <ProgressBar
+                        android:id="@+id/timerProgressBar"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerInParent="true"
+                        android:indeterminateOnly="false"
+                        android:progressDrawable="@drawable/timer_progress_bar" />
+
+                    <TextView
+                        android:id="@+id/timerTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/source_sans_pro_semibold"
+                        android:text="90"
+                        android:textColor="@color/ComponentRed"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="The Question"
+                    android:layout_below="@+id/timerRelativeLayout"
+                    android:id="@+id/theQuestionTextview"
+                    android:textColor="@color/BackgroundBlue"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/rancho_font"
+                    android:textSize="25sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/questionBox"
+                    android:layout_alignParentBottom="true"
+                    android:layout_below="@+id/theQuestionTextview"
+                    android:layout_centerHorizontal="true"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginEnd="5dp"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/optionA_Button"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginStart="30dp"
+                            android:layout_marginEnd="30dp"
+                            android:background="@drawable/options_bg"
+                            android:fontFamily="@font/rancho_font"
+                            android:text="Option A"
+                            android:textColor="@color/SecondaryComponentRed"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            tools:ignore="TouchTargetSizeCheck" />
+
+                        <Button
+                            android:id="@+id/optionB_Button"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginStart="30dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="30dp"
+                            android:background="@drawable/options_bg"
+                            android:fontFamily="@font/rancho_font"
+                            android:text="Option B"
+                            android:textColor="@color/SecondaryComponentRed"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            tools:ignore="TouchTargetSizeCheck" />
+
+                        <Button
+                            android:id="@+id/optionC_Button"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginStart="30dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="30dp"
+                            android:background="@drawable/options_bg"
+                            android:fontFamily="@font/rancho_font"
+                            android:text="Option C"
+                            android:textColor="@color/SecondaryComponentRed"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            tools:ignore="TouchTargetSizeCheck" />
+
+                        <Button
+                            android:id="@+id/optionD_Button"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginStart="30dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="30dp"
+                            android:background="@drawable/options_bg"
+                            android:fontFamily="@font/rancho_font"
+                            android:text="Option D"
+                            android:textColor="@color/SecondaryComponentRed"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            tools:ignore="TouchTargetSizeCheck" />
+
+                        <Button
+                            android:id="@+id/skipThisButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:layout_marginStart="80dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="80dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/options_bg"
+                            android:fontFamily="@font/source_sans_pro_regular"
+                            android:padding="1dp"
+                            android:text="Skip"
+                            android:textColor="@color/Highlighter"
+                            android:textSize="11sp"
+                            tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/hint_notes_scrollView"
+                android:layout_below="@+id/questionAndAnswerCardRelativeLayer"
+                android:scrollbars="vertical"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="2dp"
+                android:layout_centerHorizontal="true"
+                android:fillViewport="true">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:padding="20dp"
+                    android:textAlignment="center"
+                    android:textSize="15sp"
+                    android:text="how addition happens is great."
+                    android:fontFamily="@font/rancho_font"
+                    android:id="@+id/hint_notes_TextView"
+                    android:textColor="@color/BackgroundBlue"
+                    android:background="@drawable/hint_bg" />
+
+            </ScrollView>
+
+
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+
+
+
+
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

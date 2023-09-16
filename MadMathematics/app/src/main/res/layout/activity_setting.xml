@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/BackgroundBlue"
+    tools:context=".SettingActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toprelative"
+        android:paddingBottom="10dp"
+        android:background="@drawable/scores_view_bg"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true">
+
+        <Button
+            android:id="@+id/goBackButton"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/go_back_button"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Hi, User!"
+            android:background="@drawable/options_bg"
+            android:fontFamily="@font/source_sans_pro_bold"
+            android:textColor="@color/SecondaryComponentRed"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:layout_below="@id/goBackButton"
+            android:id="@+id/hiUSerTextView"
+            android:layout_marginTop="10dp"
+            android:paddingStart="40dp"
+            android:paddingEnd="40dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"/>
+
+        <TextView
+            android:id="@+id/pleaseLogInTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hiUSerTextView"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:gravity="center"
+            android:text="You Are Not Logged In , Please Log In"
+            android:textColor="@color/ComponentRed"
+            android:textSize="15sp" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:fadeScrollbars="false"
+        android:layout_below="@+id/toprelative"
+        android:layout_above="@id/bannerAdView">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:id="@+id/changePassoword"
+                android:background="@drawable/settings_card_bg">
+
+            <Button
+                android:id="@+id/changePassowordButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/blue_card_view"
+                android:fontFamily="@font/source_sans_pro_semibold"
+                android:textSize="15sp"
+                android:paddingBottom="15dp"
+                android:paddingTop="10dp"
+                android:padding="10dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:text="Change password"
+                android:textColor="@color/Highlighter"
+                />
+
+                <Button
+                    android:id="@+id/clear_HighScores"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/blue_card_view"
+                    android:fontFamily="@font/source_sans_pro_semibold"
+                    android:layout_below="@+id/changePassowordButton"
+                    android:textSize="15sp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:paddingBottom="15dp"
+                    android:paddingTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:padding="10dp"
+                    android:text="Clear High scores"
+                    android:textColor="@color/Highlighter"
+                    />
+
+
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="15dp"
+                android:layout_below="@id/changePassoword"
+                android:layout_marginEnd="15dp"
+                android:id="@+id/secondRelative"
+                android:background="@drawable/settings_card_bg">
+
+                <Button
+                    android:id="@+id/logoutUserButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/blue_card_view"
+                    android:fontFamily="@font/source_sans_pro_semibold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:paddingBottom="15dp"
+                    android:paddingTop="10dp"
+                    android:text="Logout User"
+                    android:textColor="@color/Highlighter"
+                    />
+
+
+
+                <Button
+                    android:id="@+id/delteAccountButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/blue_card_view"
+                    android:fontFamily="@font/source_sans_pro_semibold"
+                    android:layout_below="@+id/logoutUserButton"
+                    android:textSize="15sp"
+                    android:paddingBottom="15dp"
+                    android:paddingTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:padding="10dp"
+                    android:text="Delete Account"
+                    android:textColor="@color/Highlighter"
+                    />
+
+
+            </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="30dp"
+        android:layout_below="@id/secondRelative"
+        android:layout_marginEnd="30dp"
+        android:id="@+id/thridreltive"
+        android:background="@drawable/settings_card_bg">
+
+
+        <TextView
+            android:id="@+id/aboutUsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="20dp"
+            android:clickable="true"
+            android:drawableStart="@drawable/ic_baseline_info_24"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/source_sans_pro_regular"
+            android:padding="03dp"
+            android:text="About Mad Mathematics"
+            android:textColor="@color/Highlighter"
+            android:textSize="20sp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+
+    </RelativeLayout>
+
+    </RelativeLayout>
+
+    </ScrollView>
+
+    <com.google.android.gms.ads.AdView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/bannerAdView"
+        app:adSize="BANNER"
+        app:adUnitId="@string/bannerAd_2"
+        android:background="@color/BackgroundBlue" />
+
+
+
+
+</RelativeLayout>

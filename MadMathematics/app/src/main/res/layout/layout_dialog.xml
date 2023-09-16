@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:layout_height="wrap_content"
+    android:layout_width="250dp">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        app:cardCornerRadius="40dp"
+        android:background="#00FFFFFF"
+        android:backgroundTint="#00FFFFFF"
+        app:cardBackgroundColor="#00FFFFFF"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="30dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:gravity="center"
+            android:background="@drawable/dialog_bg"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="12dp"
+                android:id="@+id/openEasyMode"
+                android:background="@drawable/back_for_progress_bar"
+                android:text="Easy Mode"
+                android:textColor="@color/SecondaryComponentRed"
+                android:fontFamily="@font/source_sans_pro_semibold"
+                />
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:layout_marginTop="15dp"
+                android:paddingBottom="12dp"
+                android:id="@+id/openintermediateyMode"
+                android:textColor="@color/SecondaryComponentRed"
+                android:background="@drawable/back_for_progress_bar"
+                android:text="Intermediate Mode"/>
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="12dp"
+                android:layout_marginTop="15dp"
+                android:id="@+id/openHardMode"
+                android:textColor="@color/SecondaryComponentRed"
+                android:background="@drawable/back_for_progress_bar"
+                android:text="Hard Mode"/>
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+

@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/BackgroundBlue"
+    tools:context=".EasyMode">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EASY MODE"
+        android:fontFamily="@font/source_sans_pro_semibold"
+        android:textSize="40sp"
+        android:textColor="@color/SecondaryComponentRed"
+        android:id="@+id/topTextView"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/topTextView">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="700dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:id="@+id/questionAndAnswerCardRelativeLayer"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/question_card_view"
+                android:padding="5dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1/15"
+                    android:textSize="45sp"
+                    android:fontFamily="@font/source_sans_pro_semibold"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/BackgroundBlue"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/attemptedQuestionsTextView"/>
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/timerRelativeLayout"
+                    android:layout_below="@id/attemptedQuestionsTextView"
+                    android:layout_height="wrap_content">
+                    <ProgressBar
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:id="@+id/timerProgressBar"
+                        android:indeterminateOnly="false"
+                        android:progressDrawable="@drawable/timer_progress_bar"
+                        android:layout_centerInParent="true"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="150"
+                        android:textSize="35sp"
+                        android:fontFamily="@font/source_sans_pro_regular"
+                        android:textColor="@color/ComponentRed"
+                        android:id="@+id/timerTextView"/>
+                </RelativeLayout>
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="The Question"
+                    android:layout_below="@+id/timerRelativeLayout"
+                    android:id="@+id/theQuestionTextview"
+                    android:textColor="@color/BackgroundBlue"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/rancho_font"
+                    android:padding="5dp"
+                    android:textSize="55sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:padding="10dp"
+                    android:id="@+id/questionBox"
+                    android:layout_alignParentBottom="true"
+                    android:layout_below="@+id/theQuestionTextview"
+                    android:layout_centerHorizontal="true"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginEnd="5dp"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/optionA_Button"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/options_bg"
+                            android:fontFamily="@font/rancho_font"
+                            android:text="Option A"
+                            android:layout_marginStart="40dp"
+                            android:layout_marginEnd="40dp"
+                            android:textColor="@color/SecondaryComponentRed"
+                            android:textSize="25sp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/optionB_Button"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/options_bg"
+                            android:fontFamily="@font/rancho_font"
+                            android:text="Option B"
+                            android:layout_marginStart="40dp"
+                            android:layout_marginEnd="40dp"
+                            android:textColor="@color/SecondaryComponentRed"
+                            android:textSize="25sp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/optionC_Button"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/options_bg"
+                            android:fontFamily="@font/rancho_font"
+                            android:text="Option C"
+                            android:layout_marginStart="40dp"
+                            android:layout_marginEnd="40dp"
+                            android:textColor="@color/SecondaryComponentRed"
+                            android:textSize="25sp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/optionD_Button"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/options_bg"
+                            android:fontFamily="@font/rancho_font"
+                            android:text="Option D"
+                            android:textColor="@color/SecondaryComponentRed"
+                            android:textSize="25sp"
+                            android:layout_marginStart="40dp"
+                            android:layout_marginEnd="40dp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/skipThisButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="2dp"
+                            android:layout_marginStart="120dp"
+                            android:layout_marginEnd="120dp"
+                            android:background="@drawable/options_bg"
+                            android:fontFamily="@font/source_sans_pro_regular"
+                            android:text="Skip"
+                            android:textColor="@color/Highlighter"
+                            android:textSize="20sp"
+                            android:alpha="0.8"
+                            tools:ignore="TextContrastCheck" />
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/hint_notes_scrollView"
+                android:layout_below="@+id/questionAndAnswerCardRelativeLayer"
+                android:scrollbars="vertical"
+                android:layout_marginStart="60dp"
+                android:layout_marginEnd="60dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:fillViewport="true">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:padding="20dp"
+                    android:textAlignment="center"
+                    android:textSize="25sp"
+                    android:text="how addition happens is great."
+                    android:fontFamily="@font/rancho_font"
+                    android:id="@+id/hint_notes_TextView"
+                    android:textColor="@color/BackgroundBlue"
+                    android:background="@drawable/hint_bg" />
+
+            </ScrollView>
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+
+
+
+
+
+
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

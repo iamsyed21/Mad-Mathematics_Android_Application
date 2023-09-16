@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center_vertical"
+    android:layout_height="match_parent">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_margin="5dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="30dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:padding="5dp"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="100dp"
+                android:id="@+id/welcomeTile"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter"
+                android:layout_height="100dp"
+                android:src="@drawable/progress_three"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Welcome!"
+                android:id="@+id/Header_Text"
+                android:gravity="center"
+                android:textAllCaps="true"
+                android:textSize="20sp"
+                android:padding="5dp"
+                android:fontFamily="@font/source_sans_pro_bold"
+                android:textColor="@color/ComponentRed"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/descriptionText"
+                android:layout_gravity="center"
+                android:text="DEVELOP YOUR ARITHEMATIC SKILLS\nWITH"
+                android:gravity="center"
+                android:textSize="15sp"
+                android:fontFamily="@font/rancho_font"
+                android:textColor="@color/BackgroundBlue"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/conclusionText"
+                android:layout_gravity="center"
+                android:textAllCaps="true"
+                android:text="Mad Mathematics!"
+                android:padding="5dp"
+                android:gravity="center"
+                android:textSize="25sp"
+                android:fontFamily="@font/source_sans_pro_semibold"
+                android:textColor="@color/SecondaryComponentRed"/>
+
+
+
+
+        </LinearLayout>
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</LinearLayout>
