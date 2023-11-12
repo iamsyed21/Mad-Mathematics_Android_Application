@@ -28,5 +28,4 @@
 - Java
 - Android SDK
 - Google Firebase
-- RESTful APIs
 - Custom Quiz Algorithm
