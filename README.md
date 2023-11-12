@@ -4,20 +4,24 @@
 
 [Application URL](https://play.google.com/store/apps/details?id=com.TwentyOneCodes.madmathematics) <!-- Replace '#' with the actual URL -->
 
-![Mad Mathematics Interface](ss2.png) <!-- Replace 'image1.jpg' with your image file name -->
-
 <p align="center">
-  <img src="/ss1.png" alt="Do-It Interface" />
+  <img src="/ss2.png" alt="Task Management Features" />
 </p>
 <p align="center">
   The app offers quizzes ranging from basic addition to complex square roots, catering to various skill levels and providing a comprehensive learning experience.
 </p>
 
 <p align="center">
-  <img src="/ss3.png" alt="Task Management Features" />
+  <img src="/ss1.png" alt="Do-It Interface" />
 </p>
+
+
 <p align="center">
  Experience a soothing color palette and a friendly interface in Mad Mathematics, designed to enhance concentration and learning during quizzes.
+</p>
+
+<p align="center">
+  <img src="/ss3.png" alt="Task Management Features" />
 </p>
 
 ### Tech Stack
